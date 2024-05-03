@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
 # Titre de l'application
@@ -21,7 +22,15 @@ df = pd.DataFrame({
 })
 st.write(df)
 
+# Affichage d'un graphique
 
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+plt.plot(x, y)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Graphique de sin(x)')
+st.pyplot()
 
 # Changez le thème
 st.markdown("""
